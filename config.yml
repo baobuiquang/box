@@ -1,0 +1,219 @@
+# If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
+# contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+baseURL: "https://baobuiquang.com/box/"
+title: Box of Mind
+paginate: 3
+theme: [papermod]
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts", "papermod"]
+# googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Search
+          url: search/
+          weight: 1
+        - name: Tags
+          url: tags/
+          weight: 2
+        - name: Archive
+          url: archives
+          weight: 3
+        - name: About
+          url: https://baobuiquang.com/
+          weight: 4
+        - name: Studio
+          url: https://onelevel.studio/
+          weight: 5
+
+  # fr:
+  #   languageName: ":fr:"
+  #   weight: 2
+  #   title: PaperModL2
+  #   taxonomies:
+  #     category: FRcategories
+  #     tag: FRtags
+  #     series: FRseries
+  #   menu:
+  #     main:
+  #       - name: Archive
+  #         url: archives/
+  #         weight: 5
+  #       - name: FRTags
+  #         url: frtags
+  #         weight: 10
+  #       - name: FRCategories
+  #         url: frcategories
+  #         weight: 10
+  #       - name: FRSeries
+  #         url: frseries
+  #         weight: 10
+  #       - name: NullLink
+  #         url: "#"
+
+  #   # custom params for each language should be under [langcode].parms - hugo v0.120.0
+  #   params:
+  #     languageAltTitle: French
+  #     profileMode:
+  #       enabled: true
+  #       title: PaperMod
+  #       imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+  #       imageTitle: ProfileMode image
+  #       # imageWidth: 120
+  #       # imageHeight: 120
+  #       subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+  #       buttons:
+  #         - name: Blog
+  #           url: posts
+  #         - name: Profile Mode
+  #           url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+
+  # fa:
+  #   languagedirection: rtl
+  #   weight: 3
+  #   title: PaperMod RTL
+  #   taxonomies:
+  #     category: FAcategories
+  #     tag: FAtags
+  #     series: FAseries
+  #   menu:
+  #     main:
+  #       - name: FATags
+  #         url: fatags
+  #         weight: 10
+  #   # custom params for each language should be under [langcode].parms - hugo v0.120.0
+  #   params:
+  #     homeInfoParams:
+  #       Title: "Hi there \U0001F44B"
+  #       Content: Welcome to RTL layout
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+
+# ========== Default params for posts ==========
+params:
+  env: production # Enhance SEO, enable google analytics, opengraph, twitter-cards and schema.
+  author: ["Bao Bui-Quang"] # Can have multiple authors
+  title: "No title"
+  description: "Bao Bui-Quang's Blogs"
+  defaultTheme: auto
+  # disableThemeToggle: true
+  # ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowFullTextinRSS: true
+  # ShowPageNums: true
+  ShowToc: true
+  TocOpen: true
+  # comments: true
+  # searchHidden: true
+  # disableScrollToTop: true
+  # disableAnchoredHeadings: true
+  # hideMeta: true
+  # hideSummary: true
+  # hideFooter: true
+  ShowWordCount: true
+
+  CanonicalLinkText: Originally published at
+
+  images: ["images/papermod-cover.png"]
+
+  homeInfoParams:
+    Title: "Box of Mind"
+    Content: >
+      ***Lorem ipsum*** dolor sit amet, consectetur adipiscing elit.
+      In sit amet sagittis sapien, in malesuada tellus.
+      Pellentesque sit amet tellus risus.
+      Integer hendrerit fringilla ligula in viverra.
+      Donec consectetur, felis ac lacinia rutrum, ante massa pretium erat.
+  socialIcons:
+    - name: github
+      title: Github Profile
+      url: "https://github.com/baobuiquang"
+    - name: instagram
+      title: Instagram Profile
+      url: "https://www.instagram.com/bao_buiquang/"
+
+  assets:
+    disableHLJS: true
+
+  # cover:
+  #   hidden: true                 # hide everywhere but not in structured data
+  #   hiddenInList: true           # hide on list pages and home
+  #   hiddenInSingle: true         # hide on single page
+  #   cover.linkFullImages: true
+  #   cover.responsiveImages: true
+
+  # fuseOpts:
+  #     isCaseSensitive: false
+  #     shouldSort: true
+  #     location: 0
+  #     distance: 1000
+  #     threshold: 0.4
+  #     minMatchCharLength: 0
+  #     keys: ["title", "permalink", "summary", "content"]
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+
+# privacy:
+#   vimeo:
+#     disabled: false
+#     simple: true
+
+#   twitter:
+#     disabled: false
+#     enableDNT: true
+#     simple: true
+
+#   instagram:
+#     disabled: false
+#     simple: true
+
+#   youtube:
+#     disabled: false
+#     privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
